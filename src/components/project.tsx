@@ -1,3 +1,4 @@
+import { getDictionary } from "@/app/[lang]/dictionaries";
 import {
   FaLaravel,
   FaReact,
@@ -10,10 +11,12 @@ const Project = ({
   appStore,
   link,
   playStore,
+  dict,
 }: React.PropsWithChildren<{
   link?: string;
   appStore?: string;
   playStore?: string;
+  dict: Awaited<ReturnType<typeof getDictionary>>;
 }>) => {
   return (
     <div>
@@ -25,14 +28,14 @@ const Project = ({
         <div className="w-[40px] h-[40px] bg-background rounded-full"></div>
       </div>
       <div className="flex flex-row items-center gap-x-4 py-4">
-        <p className="text-3xl">Technologies used:</p>
+        <p className="text-3xl">{dict.works.techs}</p>
         <FaLaravel className="text-4xl" />
         <FaReact className="text-4xl" />
       </div>
       <div className="text-center">
         {link && (
           <a className="text-2xl" href={link} rel="noreferrer" target="_blank">
-            Check it out here
+            {dict.works.check}
           </a>
         )}
         {(appStore || playStore) && (

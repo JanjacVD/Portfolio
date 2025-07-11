@@ -3,6 +3,7 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --foreground-opacity: #1717174a;
 }
 
 @theme inline {
@@ -14,11 +15,63 @@
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
+    --foreground-opacity: #ededed34;
   }
 }
 
 body {
-  background: var(--background);
+  background-color: var(--background);
   color: var(--foreground);
   font-family: monospace;
+  cursor: none;
+}
+main {
+  background-image: linear-gradient(
+      var(--foreground-opacity) 2px,
+      transparent 2px
+    ),
+    linear-gradient(90deg, var(--foreground-opacity) 2px, transparent 2px);
+  background-size: 50px 50px, 50px 50px, 10px 10px, 10px 10px;
+  background-position: -2px -2px, -2px -2px, -1px -1px, -1px -1px;
+}
+
+.custom-cursor {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  pointer-events: none; /* so it doesn't block clicks */
+  backdrop-filter: blur(8px);
+  background: rgba(255 255 255 / 0.25);
+  border: 3px solid rgba(255 255 255 / 0.6);
+  box-shadow: 0 0 10px rgba(255 255 255 / 0.3);
+  transition: width 0.2s ease, height 0.2s ease;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+}
+
+.ripple {
+  position: fixed;
+  width: 30px;
+  height: 30px;
+  background: rgba(135, 206, 235, 0.4); /* light blue glassy */
+  border-radius: 50%;
+  transform: translate(-50%, -50%) scale(0.5);
+  animation: rippleEffect 0.7s ease-out forwards;
+  pointer-events: none;
+  backdrop-filter: blur(6px);
+  box-shadow: 0 0 8px rgba(135, 206, 235, 0.7);
+}
+
+@keyframes rippleEffect {
+  0% {
+    opacity: 0.8;
+    transform: translate(-50%, -50%) scale(0.5);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(2);
+  }
 }

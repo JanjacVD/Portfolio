@@ -1,0 +1,60 @@
+{
+  "nav": {
+    "home": "Home",
+    "work": "Work",
+    "contact": "Contact",
+    "about": "About me"
+  },
+  "home": {
+    "desc": "Developing custom software solutions",
+    "links": "Useful links:"
+  },
+  "works": {
+    "my": "My Work",
+    "techs": "Technologies used::",
+    "check": "Check it out here"
+  },
+  "about": {
+    "title": "About me",
+    "tech": "Tech stack:",
+    "intro": "I'm a frontend web developer with a passion for transforming ideas into thoughtful, user-centric digital experiences. I specialize in building seamless, intuitive interfaces that are not only visually engaging but also highly functional and efficient.",
+    "line2": "My approach to development is grounded in a deep understanding of both user needs and business goals. I believe that great design and robust code go hand in hand, and I strive to create solutions that are scalable, maintainable, and performance-optimized. Whether it’s a responsive web application, a complex interface, or a simple landing page, I focus on delivering products that are fast, accessible, and consistent across devices and platforms.",
+    "line3": "By leveraging modern technologies and best practices, I aim to craft frontend experiences that enhance usability, foster engagement, and drive measurable results for clients and end users alike. Collaboration, attention to detail, and a user-first mindset are central to everything I build."
+  },
+  "metadataHome": {
+    "title": "Valentino Janjac – Software Engineer",
+    "description": "Portfolio of Valentino Janjac, a software engineer specializing in modern web development.",
+    "keywords": "Valentino Janjac, Software Engineer, Web Developer, Portfolio, React, Next.js",
+    "author": "Valentino Janjac",
+    "ogTitle": "Valentino Janjac – Software Engineer",
+    "ogDescription": "Explore the work and projects of Valentino Janjac, a passionate web developer.",
+    "ogLocale": "en_US"
+  },
+  "metadataWork": {
+    "title": "Projects – Valentino Janjac",
+    "description": "Explore a collection of software projects by Valentino Janjac, including mobile apps and responsive websites.",
+    "keywords": "Valentino Janjac, Projects, Portfolio, Web Developer, Mobile Apps, Cute-icle, VD-AD, React, Next.js",
+    "author": "Valentino Janjac",
+    "ogTitle": "Projects – Valentino Janjac",
+    "ogDescription": "Discover Valentino Janjac's featured work, including web and mobile applications.",
+    "ogLocale": "en_US"
+  },
+  "metadataContact": {
+    "title": "Contact – Valentino Janjac",
+    "description": "Book a meeting with Valentino Janjac via Cal.com. Let's discuss software development or potential collaboration.",
+    "keywords": "Valentino Janjac, Contact, Book a Call, Cal.com, Meeting, Software Developer",
+    "author": "Valentino Janjac",
+    "ogTitle": "Contact – Valentino Janjac",
+    "ogDescription": "Schedule a call with Valentino Janjac through Cal.com.",
+    "ogLocale": "en_US"
+  },
+  "metadataAbout": {
+    "title": "About Valentino Janjac",
+    "description": "Learn more about Valentino Janjac, a frontend developer passionate about crafting user-centric digital experiences using modern technologies.",
+    "keywords": "Valentino Janjac, About, Frontend Developer, React, Next.js, Laravel, Tailwind CSS, PostgreSQL, Linux, Typescript, Javascript",
+    "author": "Valentino Janjac",
+    "ogTitle": "About Valentino Janjac",
+    "ogDescription": "Discover the background, skills, and tech stack of frontend developer Valentino Janjac.",
+    "ogLocale": "en_US"
+  }
+}

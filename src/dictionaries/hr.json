@@ -1,0 +1,60 @@
+{
+  "nav": {
+    "home": "Početna",
+    "work": "Radovi",
+    "contact": "Kontakt",
+    "about": "O Meni"
+  },
+  "home": {
+    "desc": "Razvoj prilagođenih softverskih rješenja",
+    "links": "Korisni linkovi:"
+  },
+  "works": {
+    "my": "Moji radovi",
+    "techs": "Korištene tehnologije:",
+    "check": "Pogledajte ovdje"
+  },
+  "about": {
+    "title": "O meni",
+    "tech": "Tehnologije:",
+    "intro": "Ja sam frontend web developer s velikom strašću za pretvaranje ideja u promišljena, korisnički usmjerena digitalna iskustva. Specijaliziran sam za izradu besprijekornih i intuitivnih sučelja koja nisu samo vizualno privlačna, već i funkcionalna i učinkovita.",
+    "line2": "Moj pristup razvoju temelji se na dubokom razumijevanju potreba korisnika i poslovnih ciljeva. Vjerujem da odličan dizajn i kvalitetan kod idu ruku pod ruku, te nastojim stvarati rješenja koja su skalabilna, lako održiva i optimizirana za performanse. Bilo da se radi o responzivnoj web aplikaciji, složenom sučelju ili jednostavnoj odredišnoj stranici, fokusiram se na isporuku proizvoda koji su brzi, pristupačni i dosljedni na svim uređajima i platformama.",
+    "line3": "Korištenjem modernih tehnologija i najboljih praksi, nastojim kreirati frontend iskustva koja poboljšavaju upotrebljivost, potiču angažman i donose konkretne rezultate za klijente i krajnje korisnike. Suradnja, pažnja na detalje i razmišljanje iz perspektive korisnika temelj su svega što radim."
+  },
+  "metadataHome": {
+    "title": "Valentino Janjac – Softverski inženjer",
+    "description": "Portfolio Valentina Janjca, softverskog inženjera specijaliziranog za razvoj modernih web aplikacija.",
+    "keywords": "Valentino Janjac, Softverski inženjer, Web programer, Portfolio, React, Next.js",
+    "author": "Valentino Janjac",
+    "ogTitle": "Valentino Janjac – Softverski inženjer",
+    "ogDescription": "Istražite rad i projekte Valentina Janjca, strastvenog web programera.",
+    "ogLocale": "hr_HR"
+  },
+  "metadataWork": {
+    "title": "Projekti – Valentino Janjac",
+    "description": "Istražite kolekciju softverskih projekata Valentina Janjca, uključujući mobilne aplikacije i responzivne web stranice.",
+    "keywords": "Valentino Janjac, Projekti, Portfolio, Web programer, Mobilne aplikacije, Cute-icle, VD-AD, React, Next.js",
+    "author": "Valentino Janjac",
+    "ogTitle": "Projekti – Valentino Janjac",
+    "ogDescription": "Otkrijte istaknute radove Valentina Janjca, uključujući web i mobilne aplikacije.",
+    "ogLocale": "hr_HR"
+  },
+  "metadataContact": {
+    "title": "Kontakt – Valentino Janjac",
+    "description": "Rezervirajte sastanak s Valentinom Janjcem putem Cal.com platforme. Razgovarajmo o razvoju softvera ili suradnji.",
+    "keywords": "Valentino Janjac, Kontakt, Rezerviraj poziv, Cal.com, Sastanak, Softverski inženjer",
+    "author": "Valentino Janjac",
+    "ogTitle": "Kontakt – Valentino Janjac",
+    "ogDescription": "Zakažite poziv s Valentinom Janjcem putem Cal.com.",
+    "ogLocale": "hr_HR"
+  },
+  "metadataAbout": {
+    "title": "O Valentinu Janjcu",
+    "description": "Saznajte više o Valentinu Janjcu, frontend developeru strastvenom u stvaranju korisniku prilagođenih digitalnih iskustava koristeći moderne tehnologije.",
+    "keywords": "Valentino Janjac, O meni, Frontend developer, React, Next.js, Laravel, Tailwind CSS, PostgreSQL, Linux, Typescript, Javascript",
+    "author": "Valentino Janjac",
+    "ogTitle": "O Valentinu Janjcu",
+    "ogDescription": "Otkrijte pozadinu, vještine i tehnološki stack frontend developera Valentina Janjca.",
+    "ogLocale": "hr_HR"
+  }
+}

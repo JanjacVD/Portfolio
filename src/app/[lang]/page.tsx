@@ -2,8 +2,30 @@ import profilePic from "@/assets/profile.jpg";
 import Image from "next/image";
 import { FaGithub, FaInstagram, FaLinkedin } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
+import { getDictionary, TLocale } from "./dictionaries";
 
-export default function Home() {
+export async function generateMetadata({
+  params,
+}: {
+  params: { lang: TLocale };
+}) {
+  const lang = (await params).lang;
+  const dict = await getDictionary(lang);
+  return {
+    title: dict.metadataHome.title,
+    description: dict.metadataHome.description,
+    keywords: dict.metadataHome.keywords,
+    authors: [{ name: dict.metadataHome.author }],
+    openGraph: {
+      title: dict.metadataHome.ogTitle,
+      description: dict.metadataHome.ogDescription,
+      locale: dict.metadataHome.ogLocale,
+    },
+  };
+}
+export default async function Home({ params }: { params: { lang: TLocale } }) {
+  const lang = (await params).lang;
+  const dict = await getDictionary(lang);
   return (
     <div>
       <div className="flex gap-x-16 items-center justify-center px-12 flex-col md:flex-row gap-y-16">
@@ -12,7 +34,7 @@ export default function Home() {
             Valentino Janjac
           </h1>
           <h2 className="text-4xl mt-4">Software Engineer</h2>
-          <p className="text-2xl mt-4">Developing custom software solutions</p>
+          <p className="text-2xl mt-4">{dict.home.desc}</p>
         </div>
         <div className="flex-1 flex items-center justify-center">
           <Image
@@ -25,7 +47,7 @@ export default function Home() {
         </div>
       </div>
       <div className="text-center flex flex-col items-center gap-y-8 mt-12 justify-center">
-        <h3 className="text-2xl tracking-wider">Useful links:</h3>
+        <h3 className="text-2xl tracking-wider">{dict.home.links}</h3>
         <div className="flex items-center gap-x-4 [&>a]:hover:scale-125 [&>a]:transition-all">
           <a
             href="https://github.com/JanjacVD"
