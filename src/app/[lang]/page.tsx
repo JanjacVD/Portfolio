@@ -2,14 +2,11 @@ import profilePic from "@/assets/profile.jpg";
 import Image from "next/image";
 import { FaGithub, FaInstagram, FaLinkedin } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
-import { getDictionary, TLocale } from "./dictionaries";
+import { getDictionary } from "./dictionaries";
+import { TParams } from "../../../types";
 
-export async function generateMetadata({
-  params,
-}: {
-  params: { lang: TLocale };
-}) {
-  const lang = (await params).lang;
+export async function generateMetadata({ params }: { params: TParams }) {
+  const { lang } = await params;
   const dict = await getDictionary(lang);
   return {
     title: dict.metadataHome.title,
@@ -23,8 +20,8 @@ export async function generateMetadata({
     },
   };
 }
-export default async function Home({ params }: { params: { lang: TLocale } }) {
-  const lang = (await params).lang;
+export default async function Home({ params }: { params: TParams }) {
+  const { lang } = await params;
   const dict = await getDictionary(lang);
   return (
     <div>

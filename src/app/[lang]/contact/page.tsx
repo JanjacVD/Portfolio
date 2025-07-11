@@ -1,11 +1,8 @@
-import { getDictionary, TLocale } from "../dictionaries";
+import { TParams } from "../../../../types";
+import { getDictionary } from "../dictionaries";
 
-export async function generateMetadata({
-  params,
-}: {
-  params: { lang: TLocale };
-}) {
-  const lang = (await params).lang;
+export async function generateMetadata({ params }: { params: TParams }) {
+  const { lang } = await params;
   const dict = await getDictionary(lang);
 
   return {

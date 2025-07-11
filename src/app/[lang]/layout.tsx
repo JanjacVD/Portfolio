@@ -1,15 +1,12 @@
 import "../globals.css";
 import Link from "next/link";
-import { getDictionary, TLocale } from "./dictionaries";
+import { getDictionary } from "./dictionaries";
 import Footer from "@/components/Footer";
 import GlassCursor from "@/components/Cursor";
+import { TParams } from "../../../types";
 
-export async function generateMetadata({
-  params,
-}: {
-  params: { lang: string };
-}) {
-  const lang = (await params).lang;
+export async function generateMetadata({ params }: { params: TParams }) {
+  const { lang } = await params;
   // ✅ correct usage
   return {
     title: lang === "hr" ? "Naslov" : "Title",
@@ -20,9 +17,9 @@ export default async function RootLayoutas({
   params,
 }: Readonly<{
   children: React.ReactNode;
-  params: { lang: TLocale };
+  params: TParams;
 }>) {
-  const lang = (await params).lang;
+  const { lang } = await params;
   const dict = await getDictionary(lang);
   const links = [
     { label: dict.nav.home, href: "/" },

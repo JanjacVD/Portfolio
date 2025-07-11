@@ -2,14 +2,11 @@ import Project from "@/components/project";
 import cuteicle from "@/assets/cuteiclemobile.jpeg";
 import vdad from "@/assets/vdad.jpeg";
 import Image from "next/image";
-import { getDictionary, TLocale } from "../dictionaries";
+import { getDictionary } from "../dictionaries";
+import { TParams } from "../../../../types";
 
-export async function generateMetadata({
-  params,
-}: {
-  params: { lang: TLocale };
-}) {
-  const lang = (await params).lang;
+export async function generateMetadata({ params }: { params: TParams }) {
+  const { lang } = await params;
   const dict = await getDictionary(lang);
   return {
     title: dict.metadataWork.title,
@@ -24,8 +21,8 @@ export async function generateMetadata({
   };
 }
 
-export default async function Page({ params }: { params: { lang: TLocale } }) {
-  const lang = (await params).lang;
+export default async function Page({ params }: { params: TParams }) {
+  const { lang } = await params;
   const dict = await getDictionary(lang);
   return (
     <div className="p-8">

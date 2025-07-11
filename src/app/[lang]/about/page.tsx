@@ -1,16 +1,13 @@
 import { FaLaravel, FaLinux, FaReact } from "react-icons/fa";
-import { getDictionary, TLocale } from "../dictionaries";
+import { getDictionary } from "../dictionaries";
 import { SiNextdotjs, SiTypescript } from "react-icons/si";
 import { RiTailwindCssFill } from "react-icons/ri";
 import { BiLogoPostgresql } from "react-icons/bi";
 import { IoLogoJavascript } from "react-icons/io5";
+import { TParams } from "../../../../types";
 
-export async function generateMetadata({
-  params,
-}: {
-  params: { lang: TLocale };
-}) {
-  const lang = (await params).lang;
+export async function generateMetadata({ params }: { params: TParams }) {
+  const { lang } = await params;
   const dict = await getDictionary(lang);
   return {
     title: dict.metadataAbout.title,
@@ -25,8 +22,8 @@ export async function generateMetadata({
   };
 }
 
-export default async function Page({ params }: { params: { lang: TLocale } }) {
-  const lang = (await params).lang;
+export default async function Page({ params }: { params: TParams }) {
+  const { lang } = await params;
   const dict = await getDictionary(lang);
   return (
     <div className="p-8">
